@@ -23,9 +23,9 @@ git log --graph --oneline --decorate --all
 * When downloading content from a remote repo:
 
 git pull and git fetch commands are available to accomplish the task. 
-git fetch the 'safe' version of the two commands. 
-It will download the remote content but not update your local repo's working state, leaving your current work intact.
- 
+git fetch updates your remote-tracking branches under refs/remotes/<remote>/. 
+This operation is safe to run at any time since it never changes any of your local branches under refs/heads.
+
 git pull is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. 
 If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.
 

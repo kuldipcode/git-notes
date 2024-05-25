@@ -1,5 +1,5 @@
-git checkout main
-tag
+Tag
+
 git checkout main
 git tag -a 1.0.0 -m "implement social login"
 
