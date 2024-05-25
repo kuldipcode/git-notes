@@ -25,6 +25,7 @@ git log --graph --oneline --decorate --all
 git pull and git fetch commands are available to accomplish the task. 
 git fetch updates your remote-tracking branches under refs/remotes/<remote>/. 
 This operation is safe to run at any time since it never changes any of your local branches under refs/heads.
+git diff main origin/main
 git merge origin/main (git pull run this automatically)
 
 If you have local changes on your master that aren't reflected on origin, you might want git rebase origin/master to make sure your commits are 'on top'
