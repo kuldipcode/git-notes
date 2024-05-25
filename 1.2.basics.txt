@@ -1,9 +1,10 @@
+* Configuration
 git config --list --global
 
 git config --global user.name "Kuldipkumar Prajapati"
 git config --global user.email "kuldip.code@gmail.com"
 
-
+* Git basic commands
 git checkout -b dev
 git status
 git add firstfile.txt
@@ -19,7 +20,7 @@ git push origin --delete bad-branch-name (delete remote branch)
 
 git log --graph --oneline --decorate --all
 
-When downloading content from a remote repo:
+* When downloading content from a remote repo:
 
 git pull and git fetch commands are available to accomplish the task. 
 git fetch the 'safe' version of the two commands. 
