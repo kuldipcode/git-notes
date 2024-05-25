@@ -10,14 +10,15 @@ git add firstfile.txt
 git commit -m "initial commit"  
 git status     
 
-git remote add origin https://github.com/kuldipcode/pu-a1-git.git
-git branch -M main
+git remote add origin https://github.com/kuldipcode/git-notes.git
+git branch -M main (The -M <Branch> command renames the specified upstream branch from the old name to the new name)
 git push -u origin main (publish main local branches to remote)
 git push --all -u (publish all local branches to remote)
 
 git push origin --delete bad-branch-name (delete remote branch)
 
 git log --graph --oneline --decorate --all
+
 When downloading content from a remote repo:
 
 git pull and git fetch commands are available to accomplish the task. 
@@ -28,6 +29,3 @@ git pull is the more aggressive alternative; it will download the remote content
 If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.
 
 
-git remote add origin https://github.com/kuldipcode/pu-a1-git.git
-git branch -M main
-git push -u origin main
