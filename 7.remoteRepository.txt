@@ -1,3 +1,8 @@
 https://www.atlassian.com/git/tutorials/syncing/git-fetch
 git branch -r
 Remote branch refs live in the ./.git/refs/remotes/ directory.
+
+git remote add origin https://github.com/kuldipcode/git-notes.git (this will add entry in .git/config)
+git branch -M main (The -M <Branch> command renames the specified upstream branch from the old name to the new name)
+git push -u origin main (publish main local branches to remote)
+git push --all -u (publish all local branches to remote)

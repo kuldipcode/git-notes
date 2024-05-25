@@ -1,4 +1,4 @@
-Sub feature branch
+* Sub feature branch
 git checkout -b dev
 git checkout -b login/main 
 git checkout -b login/facebook
@@ -6,19 +6,19 @@ git checkout -b login/google
 
 git checkout login/facebook
 pull request to merge login/facebook to login/main
-git branch -D login/facebook
-git push origin --delete login/facebook
+git branch -D login/facebook (delete local branch)
+git push origin --delete login/facebook (delete remote branch)
 
 git checkout login/google
 pull request to merge login/google to login/main
-git branch -D login/google
-git push origin --delete login/google
+git branch -D login/google (delete local branch)
+git push origin --delete login/google (delete remote branch)
 
 
 git checkout login/main
 pull request to merge login/main to login/dev
-git branch -D login/main
-git push origin --delete login/main
+git branch -D login/main (delete local branch)
+git push origin --delete login/main (delete remote branch)
 
 
 
