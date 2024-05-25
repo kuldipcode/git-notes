@@ -1,0 +1,17 @@
+-----------------------------------------------------
+Gitflow Workflow
+The Gitflow Workflow was first published in a highly regarded 2010 blog post from Vincent Driessen at nvie. 
+The Gitflow Workflow defines a strict branching model designed around the project release. 
+This workflow doesn’t add any new concepts or commands beyond what’s required for the Feature Branch Workflow. 
+Instead, it assigns very specific roles to different branches and defines how and when they should interact. 
+
+--------------------------------------------------------
+Github Workflow
+https://docs.github.com/en/get-started/using-github/github-flow
+
+1) Create a branch
+2) Make changes
+3) Create a pull request
+4) Address review comments
+5) Merge your pull request
+6) Delete your branch

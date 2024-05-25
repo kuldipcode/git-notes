@@ -1,0 +1,27 @@
+https://sentry.io/answers/revert-a-git-repository-to-a-previous-commit/
+(I accidentally committed the wrong files to Git, but didn't push the commit to the server yet.
+How do I undo those commits from the local repository?) 
+git revert:  as a tool for undoing committed changes
+Like git checkout , git revert has the potential to overwrite files in the working directory, 
+so it will ask you to commit or stash changes that would be lost during the revert operation.
+
+git add .
+git commit -m "This commit is a mistake"
+git revert HEAD # will create a new commit doing the opposite of the one above
+git revert HEAD~3...HEAD # revert the last three commits
+
+
+git reset HEAD: is for undoing uncommitted changes. 
+
+
+git reset --soft HEAD^     # Use --soft if you want to keep your changes
+git reset --hard HEAD^     # Use --hard if you don't care about keeping the changes you made
+git reset --hard HEAD~     #deletes previous commit
+
+Relative refs
+The ~ character lets you reach parent commits. 
+For example, the following displays the grandparent of HEAD: git show HEAD~2
+
+If you want to follow a different parent, you need to specify which one with the ^ character. 
+For example, if HEAD is a merge commit, the following returns the second parent of HEAD. git show HEAD^2
+  

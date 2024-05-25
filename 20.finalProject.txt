@@ -1,0 +1,6 @@
+1. collaborators: Add 5 collaborators (all must contribute with their own branch)
+2. set rules: Add pull request on merge- Team lead only have merge permission.
+3. Follow Driessen model and Each collaborator should have their own feature branches.
+4. create two repos for front end and back end.
+
+

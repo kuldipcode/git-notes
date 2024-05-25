@@ -1,0 +1,47 @@
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+https://medium.com/@paritosh90/understanding-git-internals-c389bc47faeb
+
+Four sub-directories:
+
+hooks/ : example scripts
+info/ : exclude file for ignored patterns
+objects/ : all "objects"
+refs/ : pointers to commit objects
+Four files:
+
+HEAD : the current branch
+config : configuration options
+description
+index : staging area
+Here "object" includes:
+
+blobs (files)
+trees (directories)
+commits (reference to a tree, parent commit, etc.)
+
+Subversion
+delta storage system
+
+Git
+directed acyclic graph (DAG):Storage data structure, A directed acyclic graph or DAG is graph with directed edges and does not form a single cycle if moved in direction of edges.
+Objects in GIT: Objects are immutable files stored on disk with hash key as name assigned to them.
+.git This folder contain all tracking history of git
+
+.git/Objects
+1.Blob: current snapshot of file on git add
+2.Tree
+3. Commit
+4. Tag
+
+1. Blob contains data in compressed format.
+Incase we change test.txt back to blank file new blob will not be created as blob e6 already exist for same.
+2. Tree
+“If blob is a file; then tree is a directory”.
+git tree gets created when we use git commit command.
+explicitly create a tree using command git write-tree.(will generate root tree)
+3. commit
+Commit has two pointers:
+1. First pointer points to root tree
+2. Second pointer points to older commit.
+every new commit we will have new root tree.
+4. tag

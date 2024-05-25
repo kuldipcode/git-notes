@@ -1,0 +1,35 @@
+git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, 
+and then come back and re-apply them later on. 
+Stashing is handy if you need to quickly switch context and work on something else, 
+but you're mid-way through a code change and aren't quite ready to commit.
+
+Stashes are actually encoded in your repository as commit objects. The special ref at .git/refs/stash
+
+By default, running git stash will stash:
+changes that have been added to your index (staged changes)
+changes made to files that are currently tracked by Git (unstaged changes)
+
+But it will not stash:
+new files in your working copy that have not yet been staged
+files that have been ignored
+
+Stashing Work
+Example: create new and modifiy file and then,
+git status
+git stash
+git status
+
+Re-applying your stashed changes
+
+git status
+git stash pop (2 stash requires 2 stash pop)
+
+git stash apply (if you want to apply the same stashed changes to multiple branches.)
+
+--------------------
+git stash (tracked files)
+git stash -u (tracked + untracked files)
+git stash -a (tracked + untracked files + ignored files)
+-----------------------------
+git stash clear (deletes stash)
+

@@ -1,0 +1,33 @@
+git config --list --global
+
+git config --global user.name "Kuldipkumar Prajapati"
+git config --global user.email "kuldip.code@gmail.com"
+
+
+git checkout -b dev
+git status
+git add firstfile.txt
+git commit -m "initial commit"  
+git status     
+
+git remote add origin https://github.com/kuldipcode/pu-a1-git.git
+git branch -M main
+git push -u origin main (publish main local branches to remote)
+git push --all -u (publish all local branches to remote)
+
+git push origin --delete bad-branch-name (delete remote branch)
+
+git log --graph --oneline --decorate --all
+When downloading content from a remote repo:
+
+git pull and git fetch commands are available to accomplish the task. 
+git fetch the 'safe' version of the two commands. 
+It will download the remote content but not update your local repo's working state, leaving your current work intact.
+ 
+git pull is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. 
+If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.
+
+
+git remote add origin https://github.com/kuldipcode/pu-a1-git.git
+git branch -M main
+git push -u origin main

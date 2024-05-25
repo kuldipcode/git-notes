@@ -1,0 +1,9 @@
+Merging and Resolving Conflicts in Git
+
+git checkout dev
+git merge feature
+
+
+
+git checkout feature
+git rebase dev

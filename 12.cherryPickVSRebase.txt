@@ -1,0 +1,68 @@
+https://stackoverflow.com/questions/11835948/git-cherry-pick-vs-rebase
+
+Both do very similar things; the main conceptual difference is (in simplified terms) that:
+
+rebase moves commits from the current branch to another branch.
+
+cherry-pick copies commits from another branch to the current branch.
+
+Using diagrams similar to @Kenny Ho's answer:
+
+Given this initial state:
+
+A---B---C---D master
+     \
+      E---F---G topic
+...and assuming that you want get the commits from the topic branch replayed on top of the current master branch, you have two options:
+
+Using rebase: You'd first go to topic by doing git checkout topic, and then move the branch by running git rebase master, producing:
+
+A---B---C---D master
+             \
+              E'---F'---G' topic
+Result: your current branch topic was rebased (moved) onto master.
+The topic branch was updated, while the master branch remained in place.
+
+Using cherry-pick: you'd first go to master by doing git checkout master, and then copy the branch by running git cherry-pick topic~3..topic (or, equivalently, git cherry-pick B..G), producing:
+
+A---B---C---D---E'---F'---G' master
+     \
+      E---F---G topic
+Result: the commits from topic were copied into master.
+The master branch was updated, while the topic branch remained in place.
+
+Of course, here you had to explicitly tell cherry-pick to pick a sequence of commits, using the range notation foo..bar. If you had simply passed the branch name, as in git cherry-pick topic, it would have picked up only the commit at the tip of the branch, resulting in:
+
+A---B---C---D---G' master
+     \
+      E---F---G topic
+	  
+	  
+Rebase : 
+git checkout -b base
+file1 commit
+file2 commit
+file3 commit
+git checkout -b update
+file5 commit
+file6 commit
+git checkout -b dev
+file4 commit
+
+git checkout update
+git rebase base
+git log
+file5 
+file6 
+file1 
+file2 
+file3 
+
+git cherry-pick bd8f3e1db7d774bb1bc4db6bf693bf2db466affa(dev file4 sha)
+git log
+file4 
+file5
+file6 
+file1
+file2 
+file3 

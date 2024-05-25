@@ -1,0 +1,28 @@
+https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow
+
+they fork the official repository to create a copy of it on the server. 
+This new copy serves as their personal public repository—no other developers are allowed to push to it, but they can pull changes from it
+
+When they're ready to publish a local commit, they push the commit to their own public repository—not the official one. 
+Then, they file a pull request with the main repository, 
+which lets the project maintainer know that an update is ready to be integrated.
+
+Steps
+-----
+1. A developer 'forks' an 'official' server-side repository. This creates their own server-side copy.
+
+2. The new server-side copy is cloned to their local system.
+
+3. A Git remote path for the 'official' repository is added to the local clone.
+
+4. A new local feature branch is created.
+
+5. The developer makes changes on the new branch.
+
+6. New commits are created for the changes.
+
+7. The branch gets pushed to the developer's own server-side copy.
+
+8. The developer opens a pull request from the new branch to the 'official' repository.
+
+9. The pull request gets approved for merge and is merged into the original server-side repository

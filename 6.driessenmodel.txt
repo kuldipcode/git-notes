@@ -1,0 +1,44 @@
+Sub feature branch
+git checkout -b dev
+git checkout -b login/main 
+git checkout -b login/facebook
+git checkout -b login/google
+
+git checkout login/facebook
+pull request to merge login/facebook to login/main
+git branch -D login/facebook
+git push origin --delete login/facebook
+
+git checkout login/google
+pull request to merge login/google to login/main
+git branch -D login/google
+git push origin --delete login/google
+
+
+git checkout login/main
+pull request to merge login/main to login/dev
+git branch -D login/main
+git push origin --delete login/main
+
+
+
+release
+git checkout dev
+git checkout -b release/1.0.0
+
+fix bugs.
+git checkout release/1.0.0
+pull request to merge release/1.0.0 to main
+
+git checkout main
+tag
+git checkout main
+git tag -a 1.0.0 -m "implement social login"
+
+hotfix
+
+git checkout main
+git checkout -b hotfix/1.0.1
+fix bugs and merge as below
+pull request to merge hotfix branch to main
+git tag -a 1.0.1 -m "hot fix"

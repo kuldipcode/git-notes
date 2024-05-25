@@ -1,0 +1,69 @@
+git config --list --global
+
+git config --global user.name "Kuldipkumar Prajapati"
+git config --global user.email "kuldip.code@gmail.com"
+
+
+git checkout -b dev
+git status
+git add firstfile.txt
+git commit -m "initial commit"  
+git status     
+git push
+
+git status
+
+git checkout -b dev
+
+git remote add origin https://github.com/kuldipcode/repo.git
+git push -u origin master
+
+git log --graph --oneline --decorate --all
+
+
+Sub branch
+git checkout -b dev
+git checkout -b login/main
+git checkout -b login/facebook
+git checkout -b login/google
+
+git checkout login/facebook
+git merge login/main
+git branch -D login/facebook
+git push origin --delete login/facebook
+
+git checkout login/google
+git merge login/main
+
+
+git checkout login/main
+git merge dev
+
+git branch -D login/main
+git branch -D login/facebook
+git branch -D login/google
+
+
+release
+git checkout dev
+git checkout -b release/1.0.0
+
+fix bugs.
+git checkout release/1.0.0
+git merge dev
+git merge main
+
+git checkout main
+tag
+git checkout main
+git tag -a 1.0.0 -m "implement social login"
+
+hotfix
+
+git checkout main
+git checkout -b hotfix/1.0.1
+fix bugs and merge as below
+git merge dev
+git merge main
+
+git tag -a 1.0.1 -m "hot fix"
