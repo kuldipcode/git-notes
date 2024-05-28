@@ -2,9 +2,6 @@ On GitHub.com, navigate to the main page of the repository.
 
 Under your repository name, click  Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
 
-Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.
-In the "Code and automation" section of the sidebar, click  Branches.
-
 Next to "Branch protection rules", click Add rule.
 
 Under "Branch name pattern", type the branch name or pattern you want to protect.

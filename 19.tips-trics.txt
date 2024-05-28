@@ -1,0 +1,10 @@
+
+Count your commits
+git rev-list --count dev
+git rev-list --count --all
+
+Optimize your repo
+git gc --prune=now --aggressive
+
+View a file of another branch
+git show dev:dev.txt

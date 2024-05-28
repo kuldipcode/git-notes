@@ -7,7 +7,7 @@ Stashes are actually encoded in your repository as commit objects. The special r
 
 By default, running git stash will stash:
 changes that have been added to your index (staged changes)
-changes made to files that are currently tracked by Git (unstaged changes)
+changes made to files that are currently tracked by Git (unstaged changes: modified)
 
 But it will not stash:
 new files in your working copy that have not yet been staged
