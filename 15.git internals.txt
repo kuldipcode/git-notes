@@ -18,7 +18,7 @@ index : staging area
 ------------------------------------------------------------------
 Subversion
 delta storage system
-
+--------------------------
 Git
 directed acyclic graph (DAG):Storage data structure, A directed acyclic graph or DAG is graph with directed edges and does not form a single cycle if moved in direction of edges.
 Objects in GIT: Objects are immutable files stored on disk with hash key as name assigned to them.
@@ -33,28 +33,33 @@ Objects in GIT: Objects are immutable files stored on disk with hash key as name
 4. Tag
 
 ----------------------------------------------------------
-find .git/objects -type f
+	find .git/objects -type f
+	git show commitA...commitD
+	git-show (is a command line utility that is used to view expanded details on Git objects such as blobs, trees, tags, and commits. git-show has specific behavior per object type.)
 
 1. Blob contains data in compressed format.
 Incase we change test.txt back to blank file new blob will not be created as blob e6 already exist for same.
 
-echo 'version 1' > test.txt
-git hash-object -w test.txt (returns commit id and writes to git database)
-echo 'version 2' > test.txt
-git hash-object -w test.txt (returns commit id and writes to git database)
-git cat-file -t SHA-commitId (returns type)
-git cat-file -p SHA-commitId (returns content of commited file)
+	echo 'version 1' > test.txt
+		git hash-object -w test.txt (Adds to git database and returns commit id which refers obj  )
+	echo 'version 2' > test.txt
+		git hash-object -w test.txt (Adds to git database returns commit id and writes to git database)
+	git cat-file -t SHA-commitId (2+38 digits returns type)
+	git cat-file -p SHA-commitId (2+38 digits returns content of commited file)
 
 2. Tree
-“If blob is a file; then tree is a directory”.
-git tree gets created when we use git commit command.
-explicitly create a tree using command git write-tree.(will generate root tree)
+	“If blob is a file; then tree is a directory”.
+	git tree gets created when we use git commit command.
+	explicitly create a tree using command git write-tree.(will generate root tree)
+	
+	git update-index --add --cacheinfo 100644 \
+	83baae61804e65cc73a7201a7252750c76066a30 test.txt
+  
+	git write-tree (to write the staging area out to a tree object.)
 
-git write-tree (to write the staging area out to a tree object.)
-
-git cat-file -p master^^{tree}.
-In CMD on Windows, the ^ character is used for escaping, so you have to double it to avoid this: git cat-file -p master^^{tree}. 
-When using PowerShell, parameters using {} characters have to be quoted to avoid the parameter being parsed incorrectly: git cat-file -p 'master^{tree}'.
+	git cat-file -p master^^{tree}.
+		In CMD on Windows, the ^ character is used for escaping, so you have to double it to avoid this: git cat-file -p master^^{tree}. 
+		When using PowerShell, parameters using {} characters have to be quoted to avoid the parameter being parsed incorrectly: git cat-file -p 'master^{tree}'.
 
 3. commit
 Commit has two pointers:
@@ -65,3 +70,6 @@ every new commit we will have new root tree.
 echo 'First commit' | git commit-tree d8329f (To create a commit object, you call commit-tree and specify a single tree SHA-1 and which commit objects, if any, directly preceded it. )
 
 4. tag
+
+
+git cat-file -p 70460b4b4aece5915caf5c68d12f560a9fe3e4
