@@ -1,5 +1,5 @@
-https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
-https://medium.com/@paritosh90/understanding-git-internals-c389bc47faeb
+Referance: https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+Referance: https://medium.com/@paritosh90/understanding-git-internals-c389bc47faeb
 
 Four sub-directories:
 
@@ -7,18 +7,15 @@ hooks/ : example scripts
 info/ : exclude file for ignored patterns
 objects/ : all "objects"
 refs/ : pointers to commit objects
-Four files:
 
+Four files:
 HEAD : the current branch
 config : configuration options
 description
-index : staging area
-Here "object" includes:
+index : staging area 
 
-blobs (files)
-trees (directories)
-commits (reference to a tree, parent commit, etc.)
 
+------------------------------------------------------------------
 Subversion
 delta storage system
 
@@ -27,13 +24,16 @@ directed acyclic graph (DAG):Storage data structure, A directed acyclic graph or
 Objects in GIT: Objects are immutable files stored on disk with hash key as name assigned to them.
 .git This folder contain all tracking history of git
 
+------------------------------------------------------------------------------------
+
 .git/Objects
-1.Blob: current snapshot of file on git add
-2.Tree
-3. Commit
+1. Blob (current snapshot of file on git add)
+2. Tree  (directories)
+3. Commit (reference to a tree, parent commit, etc.)
 4. Tag
 
-Command: find .git/objects -type f
+----------------------------------------------------------
+find .git/objects -type f
 
 1. Blob contains data in compressed format.
 Incase we change test.txt back to blank file new blob will not be created as blob e6 already exist for same.
