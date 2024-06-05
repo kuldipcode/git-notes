@@ -1,4 +1,5 @@
 * Sub feature branch
+
 git checkout -b dev
 git checkout -b login/main 
 git checkout -b login/facebook
@@ -33,7 +34,8 @@ fix bugs.
 git checkout -b release/1.0.1
 pull request to merge release/1.0.1 to main
 
-* tag
+* tag (Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1.0.1).
+       A tag is like a branch that doesn’t change)
 
 git checkout main
 git tag -a 1.0.1 -m "implement social login"
