@@ -1,12 +1,12 @@
-Tag
+Tag (Capture point of history with have no further history of commits)
 
-git checkout main
-git tag -a 1.0.0 -m "implement social login"
+ Tags are ref's that point to specific points in Git history. A tag is like a branch that doesn’t change
+ Tagging is generally used to capture a point in history that is used for a marked version release (i.e. v1.0.1).
 
 hotfix
 
 git checkout main
 git checkout -b hotfix/1.0.1
 fix bugs and merge as below
-pull request to merge hotfix branch to main
 git tag -a 1.0.1 -m "hot fix"
+pull request to merge hotfix branch to main
