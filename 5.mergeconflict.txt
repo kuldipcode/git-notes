@@ -1,9 +1,41 @@
-Merging and Resolving Conflicts in Git
+* Merging and Resolving Conflicts in Git
+
+Create same filename with different content in it on different branch and try merge.
 
 git checkout dev
 git merge feature
 
+----------------------------------------------
 
-
+Rebase : 
 git checkout feature
 git rebase dev
+
+Rebase : 
+git checkout -b base
+
+create foolowing files
+file1.txt (commit file)
+file2.txt (commit file)
+file3.txt (commit file)
+
+git checkout main
+git checkout -b update
+
+create foolowing files
+file5.txt (commit file)
+file6.txt (commit file)
+
+git checkout main
+git checkout -b dev
+file4.txt (commit file)
+
+git checkout update
+git rebase base
+git log (will show following commits)
+
+file5 
+file6 
+file1 
+file2 
+file3 
