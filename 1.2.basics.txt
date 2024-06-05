@@ -30,8 +30,8 @@ git log --stat 1a410e (log detail about specific commit )
 
 * When downloading content from a remote repo: git pull and git fetch command
 
-git fetch: updates your remote-tracking branches under refs/remotes/<remote>/. 
-This operation is safe to run at any time since it never changes any of your local branches under refs/heads.
+git fetch ( updates your remote-tracking branches under refs/remotes/<remote>/. 
+This operation is safe to run at any time since it never changes any of your local branches under refs/heads.)
 
 git diff main origin/main
 
@@ -40,7 +40,7 @@ git merge origin/main (git pull run this automatically)
 
 If you have local changes on your master that aren't reflected on origin, you might want git rebase origin/master to make sure your commits are 'on top'
 
-git pull: is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. 
-If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.
+git pull ( is the more aggressive alternative; it will download the remote content for the active local branch and immediately execute git merge to create a merge commit for the new remote content. 
+If you have pending changes in progress this will cause conflicts and kick-off the merge conflict resolution flow.)
 
 
