@@ -40,6 +40,7 @@ pull request to merge release/1.0.1 to main
 git checkout main
 git tag -a 1.0.1 -m "implement social login"
 git tag (will list all tags)
+git show 1.0.1 (will return details about version)
 
 * hotfix
 
