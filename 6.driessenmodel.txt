@@ -2,7 +2,10 @@
 git checkout -b dev
 git checkout -b login/main 
 git checkout -b login/facebook
+# create facebooklogin.txt (add, commit, push)
+git checkout login/main 
 git checkout -b login/google
+# create googlelogin.txt (add, commit, push)
 
 git checkout login/facebook
 pull request to merge login/facebook to login/main

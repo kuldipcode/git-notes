@@ -7,7 +7,9 @@ When they're ready to publish a local commit, they push the commit to their own 
 Then, they file a pull request with the main repository, 
 which lets the project maintainer know that an update is ready to be integrated.
 
+
 Steps
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork
 -----
 1. A developer 'forks' an 'official' server-side repository. This creates their own server-side copy.
 

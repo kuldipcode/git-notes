@@ -1,3 +1,7 @@
+* git --version
+who do not have install git, following is link to git for windows https://www.git-scm.com/download/win
+for linux or mac , follow link https://www.git-scm.com/downloads
+
 * Configuration
 git config --list --global
 
@@ -5,7 +9,7 @@ git config --global user.name "Kuldipkumar Prajapati"
 git config --global user.email "kuldip.code@gmail.com"
 
 * Git basic commands
-git checkout -b dev
+git checkout -b dev (create new branch locally)
 git status
 git add firstfile.txt
 git commit -m "initial commit"  
@@ -17,8 +21,10 @@ git push -u origin main (publish main local branches to remote)
 git push --all -u (publish all local branches to remote)
 
 git push origin --delete bad-branch-name (delete remote branch)
+git branch -D branch (delete local branch)
 
-git log --graph --oneline --decorate --all
+
+git log --stat 1a410e (log aboutspecific commit )
 
 * When downloading content from a remote repo:
 

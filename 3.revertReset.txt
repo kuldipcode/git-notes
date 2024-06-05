@@ -9,16 +9,16 @@ so it will ask you to commit or stash changes that would be lost during the reve
 
 git add .
 git commit -m "This commit is a mistake"
-git revert HEAD # will create a new commit doing the opposite of the one above
+*git revert HEAD # will create a new commit doing the opposite of the one above
+
 git revert HEAD~3...HEAD # revert the last three commits
 
 
 git reset HEAD: is for undoing uncommitted changes. 
-
-
 git reset --soft HEAD^     # Use --soft if you want to keep your changes
 git reset --hard HEAD^     # Use --hard if you don't care about keeping the changes you made
-git reset --hard HEAD~     #deletes previous commit
+
+*git reset --hard HEAD~     #deletes previous commit
 
 Relative refs
 The ~ character lets you reach parent commits. 

@@ -43,6 +43,7 @@ git checkout -b base
 file1 commit
 file2 commit
 file3 commit
+git checkout main
 git checkout -b update
 file5 commit
 file6 commit
@@ -58,7 +59,7 @@ file1
 file2 
 file3 
 
-git cherry-pick c193216e338c831e86e9dc1c632b01583562596b(dev file4 sha)
+git cherry-pick 7128efd3be7ee80faf3adaf5a4088c965d6bb3b9(dev file4 sha)
 git log
 file4 
 file5
