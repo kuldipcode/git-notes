@@ -14,21 +14,21 @@ git rebase dev
 Rebase : 
 git checkout -b base
 
-create foolowing files
-file1.txt (commit file)
-file2.txt (commit file)
-file3.txt (commit file)
+create foolowing files;
+# file1.txt (commit file)
+# file2.txt (commit file)
+# file3.txt (commit file)
 
 git checkout main
 git checkout -b update
 
 create foolowing files
-file5.txt (commit file)
-file6.txt (commit file)
+# file5.txt (commit file)
+# file6.txt (commit file)
 
 git checkout main
 git checkout -b dev
-file4.txt (commit file)
+# file4.txt (commit file)
 
 git checkout update
 git rebase base
