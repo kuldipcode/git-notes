@@ -51,4 +51,5 @@ git checkout -b hotfix/1.0.2
 
 * Production 
 pull request to merge hotfix branch to main
+git checkout main
 git tag -a 1.0.2 -m "hot fix"

@@ -1,6 +1,6 @@
 **Add Git submodule
 git init
-git submodule add https://github.com/kuldipcode/driessen-model
+git submodule add https://github.com/kuldipcode/c12-driessen-model
 git status
 
 
@@ -9,10 +9,5 @@ First you should notice the new .gitmodules file.
 This is a configuration file that stores the mapping between the project’s URL and the local subdirectory you’ve pulled it into:
 
 
-
-update
-git submodule init
-git submodule update
-
-or
+* Update remote submodule repo to local repo
 git submodule update --remote

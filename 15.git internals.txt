@@ -53,7 +53,7 @@ Incase we change test.txt back to blank file new blob will not be created as blo
 	explicitly create a tree using command git write-tree.(will generate root tree)
 	
 	git update-index --add --cacheinfo 100644 \
-	83baae61804e65cc73a7201a7252750c76066a30 test.txt
+	83baae61804e65cc73a7201a7252750c76066a30 test.txt   (artificially add the earlier version of the test.txt file to a new staging area.)
   
 	git write-tree (to write the staging area out to a tree object.)
 

@@ -18,7 +18,8 @@ git status (check untracked (red) and tracked (green) files)
 * Local and remote connection
 git clone https://github.com/kuldipcode/git-notes.git
 	or
-git remote add origin https://github.com/kuldipcode/git-notes.git 
+git init
+git remote add origin https://github.com/kuldipcode/c12-driessen-model.git 
 git branch -M main (The -M <Branch> command renames the specified upstream branch from the old name (master) to the new name (main))
 git push -u origin main (publish main local branches to remote)
 git push --all -u (publish all local branches to remote)
