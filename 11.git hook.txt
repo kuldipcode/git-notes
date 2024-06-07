@@ -9,8 +9,11 @@ altering the project environment depending on the state of the repository
 implementing continuous integration workflows. 
 automate or optimize virtually any aspect of your development workflow.
 
-prepare-commit-msg.sample
-
+---------------------------
+.git/hooks/prepare-commit-msg  (add following lines of codes)
+-------------------------------
 #!/bin/sh
 
 echo "# Please include a useful commit message!" > $1
+---------------------------------------------------------------
+When you will try to commit without message it will create new tab.
