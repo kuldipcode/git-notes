@@ -37,7 +37,7 @@ Objects in GIT: Objects are immutable files stored on disk with hash key as name
 	git show commitA...commitD
 	git-show (is a command line utility that is used to view expanded details on Git objects such as blobs, trees, tags, and commits. git-show has specific behavior per object type.)
 
-1. Blob contains data in compressed format.
+* 1. Blob contains data in compressed format.
 Incase we change test.txt back to blank file new blob will not be created as blob e6 already exist for same.
 
 	echo 'version 1' > test.txt
@@ -47,29 +47,29 @@ Incase we change test.txt back to blank file new blob will not be created as blo
 	git cat-file -t SHA-commitId (2+38 digits returns type)
 	git cat-file -p SHA-commitId (2+38 digits returns content of commited file)
 
-2. Tree
+* 2. Tree
 	“If blob is a file; then tree is a directory”.
 	git tree gets created when we use git commit command.
 	explicitly create a tree using command git write-tree.(will generate root tree)
-	
-	git update-index --add --cacheinfo 100644 \
-	83baae61804e65cc73a7201a7252750c76066a30 test.txt   (artificially add the earlier version of the test.txt file to a new staging area.)
-  
+	  
 	git write-tree (to write the staging area out to a tree object.)
 
 	git cat-file -p master^^{tree}.
 		In CMD on Windows, the ^ character is used for escaping, so you have to double it to avoid this: git cat-file -p master^^{tree}. 
 		When using PowerShell, parameters using {} characters have to be quoted to avoid the parameter being parsed incorrectly: git cat-file -p 'master^{tree}'.
 
-3. commit
+* 3. commit object stores information about who saved the snapshots, when they were saved, or why they were saved.
+
 Commit has two pointers:
 1. First pointer points to root tree
 2. Second pointer points to older commit.
+
 every new commit we will have new root tree.
 
 echo 'First commit' | git commit-tree d8329f (To create a commit object, you call commit-tree and specify a single tree SHA-1 and which commit objects, if any, directly preceded it. )
 
-4. tag
+git log --stat 1a410e
 
+* 4. tag
 
 git cat-file -p 70460b4b4aece5915caf5c68d12f560a9fe3e4

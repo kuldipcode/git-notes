@@ -35,7 +35,7 @@ git switch remotebranch (check our remote branch)
 git diff main origin/main
 
 git checkout main
-git merge origin/main (git pull run this automatically)
+git merge origin/main --allow-unrelated-histories (git pull run this automatically)
 	# --allow-unrelated-histories 
 or 
 
