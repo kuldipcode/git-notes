@@ -1,4 +1,4 @@
-https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+### Topics
 
 (1 Introduction to Version Control and Git - Overview of version control - Introduction to Git
 - Understand the importance of version control
