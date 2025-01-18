@@ -55,3 +55,7 @@ https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 (20 Final Project: Applying Git in a Collaborative Workflow - Collaborative project using Git - Integration of learned Git concepts
 - Apply Git skills in a collaborative project
 - Demonstrate understanding of Git concepts in a real-world scenario
+
+### Extra Topics
+#### CI CD
+#### copilot
